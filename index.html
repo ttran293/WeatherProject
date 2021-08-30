@@ -1,21 +1,73 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Weather</title>
-    <link rel="stylesheet" href="css/styles.css">
-  </head>
-  <body>
-    <form action="/" method="post">
-    <p>Select Your City:</p>
-    <input type="radio" id="London" name="city" value="London">
-    <label for="London">London</label><br>
-    <input type="radio" id="Paris" name="city" value="Paris">
-    <label for="Paris">Paris</label><br>
-    <input type="radio" id="New York" name="city" value="New York">
-    <label for="New York">New York</label>
+
+<head>
+  <meta charset="utf-8">
+  <title>Weather</title>
+
+
+  <style>
+    p{
+
+    }
+    .container {
+    }
+    .radio-button{
+
+    }
+    .submit-button{
+      display:block;
+    }
+  </style>
+</head>
+
+<body>
+      <p>Select Your City:</p>
+  <form class = "container" action="/" method="post">
+    <div class="radio-button">
+      <input type="radio" id="London" name="city" value="London">
+        <label for="London">London</label><br>
+    </div>
+    <div class="radio-button">
+      <input type="radio" id="Paris" name="city" value="Paris">
+        <label for="Paris">Paris</label><br>
+    </div>
+
+    <div class="radio-button">
+      <input type="radio" id="New York" name="city" value="New York">
+        <label for="New York">New York</label><br>
+    </div>
+
+    <div class="radio-button">
+      <input type="radio" id="Tokyo" name="city" value="Tokyo">
+        <label for="Tokyo">Tokyo</label><br>
+    </div>
+
+    <div class="radio-button">
+      <input type="radio" id="Ho Chi Minh" name="city" value="Ho Chi Minh">
+        <label for="Ho Chi Minh">Ho Chi Minh</label><br>
+    </div>
+
+    <div class="radio-button">
+      <input type="radio" id="Manila" name="city" value="Manila">
+        <label for="Manila">Manila</label><br>
+    </div>
+
+    <div class="radio-button">
+      <input type="radio" id="Dubai" name="city" value="Dubai">
+        <label for="Dubai">Dubai</label><br>
+    </div>
+
+    <div class="radio-button">
+      <input type="radio" id="Beijing" name="city" value="Beijing">
+        <label for="Beijing">Beijing</label><br>
+    </div>
     <br>
-    <input type="submit" value="Submit">
+    <div class="submit-button">
+      <input type="submit" value="Submit">
+    </div>
+
   </form>
-  </body>
+</body>
+
 </html>
