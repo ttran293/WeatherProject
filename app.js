@@ -12,21 +12,25 @@ app.get("/", function(req, res){
 
 app.post("/",function(req,res){
 
-  console.log(req.body.cityName);
+  console.log(req.body.city);
+  const key = "b6e19d92daea6f8d6c533d397f7ef2c5"
+  var unit = "metric";
+  var city = req.body.city;
+  const url = "https://api.openweathermap.org/data/2.5/weather?q="+ city +"&appid="+key+"&units="+unit;
 
-  const url = "https://api.openweathermap.org/data/2.5/weather?q=20904,us&appid=b6e19d92daea6f8d6c533d397f7ef2c5&units=metric";
     https.get(url, function(response){
       // console.log(response);
       response.on('data', (data) => {
         const result = JSON.parse(data);
+        console.log(result);
         const des = result.weather[0].description
         const icon = result.weather[0].icon
         var icon_url = "http://openweathermap.org/img/wn/"+icon+"@2x.png"
 
-        res.write("<p>The weather is " + des + "<p>");
-        res.write("<img src=" + icon_url +">");
+        // res.write(result)
+        // res.write("<img src=" + icon_url +">");
          //end the response process
-         res.send();
+        res.send(result);
   })
 })
 })
